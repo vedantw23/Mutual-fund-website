@@ -337,9 +337,10 @@ header {
 
 .distributor-box {
   display: grid;
-  align-content: center;
+  align-content: start;
   justify-items: center;
   gap: 14px;
+  padding-top: 8px;
   transform-style: preserve-3d;
 }
 
@@ -362,7 +363,7 @@ header {
   max-height: 520px;
   height: auto;
   object-fit: contain;
-  object-position: center;
+  object-position: center top;
   border-radius: 18px;
   border: 2px solid rgba(227, 237, 255, 0.5);
   box-shadow: 0 16px 28px rgba(6, 30, 91, 0.28);
