@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-<<<<<<< HEAD
   setActiveNavigation();
   setupNavbarDepth();
   setupRevealAnimations();
@@ -10,23 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function setActiveNavigation() {
-=======
->>>>>>> 0ec26c944e581c14d8750868498e45eecffd771b
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
   document.querySelectorAll(".nav-links a").forEach((link) => {
     const href = link.getAttribute("href");
     const isActive = href === currentPage;
-<<<<<<< HEAD
 
-=======
->>>>>>> 0ec26c944e581c14d8750868498e45eecffd771b
     link.classList.toggle("active", isActive);
     if (isActive) {
       link.setAttribute("aria-current", "page");
     }
   });
-<<<<<<< HEAD
 }
 
 /* Major interaction change: navbar gains depth after scrolling */
@@ -113,43 +106,6 @@ function setupTiltEffect() {
     });
   });
 }
-=======
-
-  const revealTargets = Array.from(
-    document.querySelectorAll(
-      ".hero, .section-block, .container, .benefit-card, .timeline-list li, .hero-highlight, .growth-visual, .page-intro-card, .calculator-card, .about-hero-card, .about-card, .contact-info-card, .contact-form-card"
-    )
-  );
-
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reducedMotion && revealTargets.length) {
-    revealTargets.forEach((el) => el.classList.add("reveal"));
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.14,
-        rootMargin: "0px 0px -40px 0px"
-      }
-    );
-
-    revealTargets.forEach((el) => observer.observe(el));
-  } else {
-    revealTargets.forEach((el) => el.classList.add("in-view"));
-  }
-
-  setupDistributorPhoto();
-  setupRobotWidget();
-  setupWhatsAppForm();
-});
->>>>>>> 0ec26c944e581c14d8750868498e45eecffd771b
 
 function setupDistributorPhoto() {
   const photo = document.querySelector(".distributor-photo");
@@ -227,15 +183,8 @@ function setupWhatsAppForm() {
 
     window.location.href = whatsappUrl;
   });
-<<<<<<< HEAD
 }
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
-=======
-}
-
-
-
->>>>>>> 0ec26c944e581c14d8750868498e45eecffd771b
