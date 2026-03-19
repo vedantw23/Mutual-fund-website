@@ -333,6 +333,7 @@ header {
     linear-gradient(160deg, #1b4dd0, #123a97 55%, #102d74 100%);
   color: #eaf2ff;
   box-shadow: var(--shadow-deep);
+  align-self: start;
 }
 
 .distributor-box {
