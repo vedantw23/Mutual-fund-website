@@ -192,11 +192,7 @@ function clearMessage(resultBox) {
 
 function formatCurrency(value) {
   const safeValue = Math.max(0, value);
-<<<<<<< HEAD
   return `\u20B9${safeValue.toLocaleString("en-IN", {
-=======
-  return `?${safeValue.toLocaleString("en-IN", {
->>>>>>> 0ec26c944e581c14d8750868498e45eecffd771b
     minimumFractionDigits: 0,
     maximumFractionDigits: 2
   })}`;
@@ -204,10 +200,4 @@ function formatCurrency(value) {
 
 function isFiniteNumber(value) {
   return Number.isFinite(value);
-<<<<<<< HEAD
 }
-
-=======
-}
-
->>>>>>> 0ec26c944e581c14d8750868498e45eecffd771b
