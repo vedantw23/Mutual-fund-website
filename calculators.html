@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Fund Advisor - Calculators</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a class="brand" href="index.html">Mutual Fund Advisor</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="calculators.html">Calculators</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right-logo">
+      <img src="mutual-fund-logo.png" alt="Mutual Fund Built on Rules logo" onerror="this.onerror=null;this.src='NJ logo.png';">
+    </div>
+</nav>
+</header>
+
+<main class="calculators-page">
+  <section class="page-intro-card">
+    <h1>Investment Calculators for Mutual Fund Planning</h1>
+    <p>Estimate possible investment outcomes across SIP, Step-Up SIP, Lump Sum, and SWP using these planning tools.</p>
+  </section>
+
+  <section class="calculator-grid">
+    <article class="calculator-card">
+      <h2>SIP Calculator</h2>
+      <p class="calculator-desc">Project the future value of fixed monthly SIP contributions over your chosen period.</p>
+      <form class="calculator-form" data-calculator="sip">
+        <div class="form-group">
+          <label for="sip-monthly">Monthly Investment Amount (&#8377;)</label>
+          <input id="sip-monthly" name="monthly" type="number" min="0" step="100" required>
+        </div>
+        <div class="form-group">
+          <label for="sip-return">Expected Annual Return (%)</label>
+          <input id="sip-return" name="annualReturn" type="number" min="0" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="sip-years">Investment Period (Years)</label>
+          <input id="sip-years" name="years" type="number" min="1" step="1" required>
+        </div>
+        <button type="submit" class="button calc-button">Calculate</button>
+      </form>
+      <div class="result-box" aria-live="polite">
+        <p class="result-message" data-field="message"></p>
+        <p>Total Investment: <strong data-field="totalInvestment">-</strong></p>
+        <p>Total Returns: <strong data-field="totalReturns">-</strong></p>
+        <p>Final Value: <strong data-field="finalValue">-</strong></p>
+      </div>
+    </article>
+
+    <article class="calculator-card">
+      <h2>Step-Up SIP Calculator</h2>
+      <p class="calculator-desc">See how increasing your SIP every year can potentially boost long-term wealth.</p>
+      <form class="calculator-form" data-calculator="stepup">
+        <div class="form-group">
+          <label for="stepup-initial">Initial Monthly Investment (&#8377;)</label>
+          <input id="stepup-initial" name="initialMonthly" type="number" min="0" step="100" required>
+        </div>
+        <div class="form-group">
+          <label for="stepup-percent">Annual Step-Up Percentage (%)</label>
+          <input id="stepup-percent" name="stepUp" type="number" min="0" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="stepup-return">Expected Return (%)</label>
+          <input id="stepup-return" name="annualReturn" type="number" min="0" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="stepup-years">Investment Period (Years)</label>
+          <input id="stepup-years" name="years" type="number" min="1" step="1" required>
+        </div>
+        <button type="submit" class="button calc-button">Calculate</button>
+      </form>
+      <div class="result-box" aria-live="polite">
+        <p class="result-message" data-field="message"></p>
+        <p>Total Investment: <strong data-field="totalInvestment">-</strong></p>
+        <p>Final Wealth Value: <strong data-field="finalValue">-</strong></p>
+      </div>
+    </article>
+
+    <article class="calculator-card">
+      <h2>Lump Sum Investment Calculator</h2>
+      <p class="calculator-desc">Calculate how a one-time investment may grow with compound returns.</p>
+      <form class="calculator-form" data-calculator="lumpsum">
+        <div class="form-group">
+          <label for="lumpsum-amount">One-Time Investment Amount (&#8377;)</label>
+          <input id="lumpsum-amount" name="amount" type="number" min="0" step="100" required>
+        </div>
+        <div class="form-group">
+          <label for="lumpsum-return">Expected Return (%)</label>
+          <input id="lumpsum-return" name="annualReturn" type="number" min="0" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="lumpsum-years">Investment Period (Years)</label>
+          <input id="lumpsum-years" name="years" type="number" min="1" step="1" required>
+        </div>
+        <button type="submit" class="button calc-button">Calculate</button>
+      </form>
+      <div class="result-box" aria-live="polite">
+        <p class="result-message" data-field="message"></p>
+        <p>Total Gain: <strong data-field="totalGain">-</strong></p>
+        <p>Final Investment Value: <strong data-field="finalInvestmentValue">-</strong></p>
+      </div>
+    </article>
+
+    <article class="calculator-card">
+      <h2>SWP Calculator (Systematic Withdrawal Plan)</h2>
+      <p class="calculator-desc">Estimate monthly withdrawals from an invested corpus while the remaining amount continues to grow.</p>
+      <form class="calculator-form" data-calculator="swp">
+        <div class="form-group">
+          <label for="swp-initial">Initial Investment (&#8377;)</label>
+          <input id="swp-initial" name="initialInvestment" type="number" min="0" step="100" required>
+        </div>
+        <div class="form-group">
+          <label for="swp-withdrawal">Monthly Withdrawal (&#8377;)</label>
+          <input id="swp-withdrawal" name="monthlyWithdrawal" type="number" min="0" step="100" required>
+        </div>
+        <div class="form-group">
+          <label for="swp-return">Expected Return (%)</label>
+          <input id="swp-return" name="annualReturn" type="number" min="0" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="swp-years">Investment Period (Years)</label>
+          <input id="swp-years" name="years" type="number" min="1" step="1" required>
+        </div>
+        <button type="submit" class="button calc-button">Calculate</button>
+      </form>
+      <div class="result-box" aria-live="polite">
+        <p class="result-message" data-field="message"></p>
+        <p>Total Amount Withdrawn: <strong data-field="totalAmountWithdrawn">-</strong></p>
+        <p>Remaining Balance: <strong data-field="remainingBalance">-</strong></p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<script src="script.js"></script>
+<script src="calculators.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
